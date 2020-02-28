@@ -9,7 +9,8 @@ Note that this project is still under development.
 
 ## To-Do
 - Basic To-Do Functionality
-  - [ ] add/remove tasks
+  - [x] add tasks
+  - [ ] remove tasks
   - [ ] edit tasks
   - [ ] mark task as done
   - [ ] reorder tasks

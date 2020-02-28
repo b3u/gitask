@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/chota">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <script defer src="./js/main.js"></script>
 </head>
 <body>
@@ -29,16 +29,11 @@
             </a>
         </div>
     </nav>
-    <main>
-        <ul>
-            <li>
-                <input type="checkbox" name="c1"/>
-                <label for="c1">Walk dog</label>
-            </li>
-            <button>
-                <i class="bx bx-plus"></i>
-            </button>
-        </ul>
+    <main class="container">
+        <ul id="tasklist"></ul>
+        <button class="pull-right" id="addTask">
+            <i class="bx bx-plus"></i>
+        </button>
         <div class="c-about-dialog is-dialog-hidden" id="aboutDialog" data-trigger="aboutDialog">
             <div class="card">
                 <header>
