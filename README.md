@@ -1,2 +1,2 @@
-# gitask
-A spocktacular system for organizing github tasks
+# Gitask
+A spocktacular system for organizing github-related tasks

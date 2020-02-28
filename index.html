@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitask</title>
+    <link rel="shortcut icon" href="https://binyam.in/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/chota">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/main.js"></script>
+</head>
+<body>
+    <nav class="nav is-vertical-align bg-light">
+        <div class="nav-left">
+            <p class="brand is-marginless">Gitask</p>
+        </div>
+        <div class="nav-center">
+            <input type="search" name="search" id="search" placeholder="Search here...">
+        </div>
+        <div class="nav-right">
+            <a href="https://github.com/b3u/gitask">
+                <i class="bx bxl-github"></i>&nbsp;GitHub
+            </a>
+
+            <a href="#" data-trigger="aboutDialog">
+                <i class="bx bx-info-circle"></i>&nbsp;About
+            </a>
+        </div>
+    </nav>
+    <main>
+        <ul>
+            <li>
+                <input type="checkbox" name="c1"/>
+                <label for="c1">Walk dog</label>
+            </li>
+            <button>
+                <i class="bx bx-plus"></i>
+            </button>
+        </ul>
+        <div class="c-about-dialog is-dialog-hidden" id="aboutDialog" data-trigger="aboutDialog">
+            <div class="card">
+                <header>
+                    <h2>About Gitask</h2>
+                </header>
+                <p>This is a side-project I made. Find it <a href="https://github.com/b3u/gitask">on GitHub</a>.</p>
+                <button class="button pull-right" data-trigger="aboutDialog">Close</button>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center">Copyright 2020 <a href="https://binyam.in">Binyamin Green</a>. Made with <i class="bx bx-coffee-togo"></i> + <i class="bx bx-code-alt"></i>.</footer>
+</body>
+</html>
