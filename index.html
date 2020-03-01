@@ -12,29 +12,32 @@
     <script defer src="./js/main.js"></script>
 </head>
 <body>
-    <nav class="nav is-vertical-align bg-light">
-        <div class="nav-left">
-            <p class="brand is-marginless">Gitask</p>
-        </div>
-        <div class="nav-center">
-            <input type="search" name="search" id="search" placeholder="Search here...">
-        </div>
-        <div class="nav-right">
-            <a href="https://github.com/b3u/gitask">
-                <i class="bx bxl-github"></i>&nbsp;GitHub
-            </a>
+    <header>
+        <nav class="nav is-vertical-align">
+            <div class="nav-left">
+                <p class="brand is-marginless">Gitask</p>
+            </div>
+            <div class="nav-center">
+                <input type="search" name="search" id="search" placeholder="Search here...">
+            </div>
+            <div class="nav-right">
+                <a href="https://github.com/b3u/gitask">
+                    <i class="bx bxl-github"></i>&nbsp;GitHub
+                </a>
 
-            <a href="#" data-trigger="aboutDialog">
-                <i class="bx bx-info-circle"></i>&nbsp;About
-            </a>
-        </div>
-    </nav>
+                <a href="#" data-trigger="aboutDialog">
+                    <i class="bx bx-info-circle"></i>&nbsp;About
+                </a>
+            </div>
+        </nav>
+        <hr>
+    </header>
     <main class="container">
         <ul id="tasklist"></ul>
         <button class="pull-right" id="addTask">
             <i class="bx bx-plus"></i>
         </button>
-        <div class="c-about-dialog is-dialog-hidden" id="aboutDialog" data-trigger="aboutDialog">
+        <div class="c-about-dialog c-is-dialog-hidden" id="aboutDialog" data-trigger="aboutDialog">
             <div class="card">
                 <header>
                     <h2>About Gitask</h2>
@@ -44,6 +47,20 @@
             </div>
         </div>
     </main>
+    <template id="taskitem">
+        <li>
+            <input type="checkbox" />
+            <label><span class="text-grey">Walk the dog...</span></label>
+            <div class="pull-right">
+                <a href="#" class="c-js-btn--edit">
+                    <i class="bx bx-edit"></i>
+                </a>
+                <a href="#" class="c-js-btn--remove">
+                    <i class="bx bx-trash"></i>
+                </a>
+            </div>
+        </li>
+    </template>
     <footer class="text-center">Copyright 2020 <a href="https://binyam.in">Binyamin Green</a>. Made with <i class="bx bx-coffee-togo"></i> + <i class="bx bx-code-alt"></i>.</footer>
 </body>
 </html>
