@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gitask</title>
+    <title>Gitask - 🖖️ A spocktacular system for organizing GitHub issues</title>
     <link rel="shortcut icon" href="https://binyam.in/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/chota">
@@ -13,7 +13,7 @@
     <script defer src="./js/main.js"></script>
 </head>
 <body>
-    <header>
+    <header class="c-page-header">
         <nav class="nav is-vertical-align">
             <div class="nav-left">
                 <p class="brand is-marginless">Gitask</p>
@@ -34,9 +34,8 @@
         <hr>
     </header>
     <main class="container">
-        <ul id="tasklist">
-        </ul>
-        <button class="pull-right" id="addTask">
+        <ul id="tasklist"></ul>
+        <button class="pull-right button icon-only is-rounded primary" id="addTask">
             <i class="bx bx-plus"></i>
         </button>
         <div class="c-about-dialog c-is-dialog-hidden" id="aboutDialog" data-trigger="aboutDialog">
@@ -44,8 +43,8 @@
                 <header>
                     <h2>About Gitask</h2>
                 </header>
-                <p>This is a side-project I made. Find it <a href="https://github.com/b3u/gitask">on GitHub</a>.</p>
-                <button class="button pull-right" data-trigger="aboutDialog">Close</button>
+                <p>This is a side-project I made. You can find <a href="https://github.com/b3u/gitask">the code</a> on GitHub.</p>
+                <button class="button pull-right" data-trigger="aboutDialog">Return</button>
             </div>
         </div>
     </main>
@@ -63,6 +62,9 @@
             </div>
         </li>
     </template>
-    <footer class="text-center">Copyright 2020 <a href="https://binyam.in">Binyamin Green</a>. Made with <i class="bx bx-coffee-togo"></i> + <i class="bx bx-code-alt"></i>.</footer>
+    <footer class="text-center">
+        <hr>
+        <p class="is-marginless">Copyright 2020 <a href="https://binyam.in">Binyamin Green</a>. Made with <i class="bx bx-coffee-togo"></i> + <i class="bx bx-code-alt"></i>.</p>
+    </footer>
 </body>
 </html>

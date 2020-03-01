@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+:root {
+    --font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
 html, body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -40,5 +43,15 @@ main {
 }
 
 #tasklist {
-    padding: 48px inherit;
+    list-style-type: none;
+    margin: 0 24px;
+    padding: 0;
+    
+    li {
+        padding: 0 4px;
+
+        input[type=checkbox]:checked + label {
+            text-decoration: line-through;
+        }
+    }
 }

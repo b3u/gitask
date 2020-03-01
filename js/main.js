@@ -1,3 +1,5 @@
+console.info("Note", "If an issue/PR is invalid, it will error with 404. Don't be alarmed");
+
 // Util
 const generateId = () => {
     return Math.random().toString(36).substr(2, 9);
@@ -37,12 +39,15 @@ const handleAdd = () => {
     
     let label = li.querySelector("label");
     label.addEventListener("dblclick", () => handleEdit(id))
-    label.addEventListener("blur", () => {label.contentEditable = false})
+    label.addEventListener("blur", () => {
+        label.contentEditable = false;
+        getLinked(label); // Link issues/PRs
+    })
+
     label.addEventListener("keydown", evt => {
         if(evt.code == 'Enter') {
             evt.preventDefault();
             label.blur();
-            label.contentEditable = false;
         }
     })
     
@@ -62,12 +67,37 @@ const handleRemove = id => {
 const handleEdit = id => {
     let label = document.querySelector(`[data-id=${id}] label`);
     label.contentEditable = true;
+    label.textContent = label.innerText; // Remove issue-links while editing
     label.focus();
 }
 
 document.getElementById('addTask').addEventListener("click", handleAdd)
 
 var sortable = Sortable.create(document.getElementById("tasklist"), {
-    chosenClass: "card",
+    ghostClass: "bd-dark",
+    dragClass: "card",
     animation: 150
 });
+
+const getLinked = (element) => {
+    // Regexp for `user/repo#n`
+    // Partly from https://github.com/shinnn/github-username-regex
+    const regexp = /([a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38})\/\w+#\d+/gi;
+    const text = element.textContent;
+
+    const matches = text.match(regexp) || [];
+    matches.forEach(m => {
+        fetch("https://api.github.com/repos/" + m.replace("#", "/issues/"))
+            .then(r => {
+                if(r.status !== 404) {
+                    return r.json();
+                }
+            }).then(j => {
+                if(j) {
+                    element.innerHTML = text.replace(m,
+                        `<a title="${j.title}" href="https://github.com/${m.replace("#", "/issues/")}" target="_blank">${m}</a>`
+                    )
+                }
+            })
+    })
+}

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "A spocktacular system for organizing github issues",
   "scripts": {
-    "start": "gulp && gulp serve",
-    "build": "gulp pack"
+    "prestart": "gulp",
+    "start": "gulp serve",
+    "build": "gulp"
   },
   "browserslist": [
     "last 1 version",
