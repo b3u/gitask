@@ -20,7 +20,7 @@ const css = cb => {
     cb();
 }
 
-const serve = cb => {    
+const serve = cb => {
     browserSync.init({
         server: "./",
         open: false,

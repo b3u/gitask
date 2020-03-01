@@ -35,6 +35,7 @@ const handleAdd = () => {
     
     let label = li.querySelector("label");
     label.addEventListener("blur", () => {label.contentEditable = false})
+    label.addEventListener("dblclick", () => handleEdit(id))
     label.addEventListener("keydown", evt => {
         if(evt.code == 'Enter') {
             evt.preventDefault();
