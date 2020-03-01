@@ -7,26 +7,11 @@
 
 Note that this project is still under development.
 
-## To-Do
-- Basic To-Do Functionality
-  - [x] add tasks
-  - [ ] remove tasks
-  - [ ] edit tasks
-  - [ ] mark task as done
-  - [ ] reorder tasks
-- Advanced To-Do Functionality
-  - [ ] multiple lists
-  - [ ] multiple views (kanban, table, etc.)
-  - [ ] user accounts (or local storage)
-- GitHub Integration
-  - [ ] auto-link text in a task
-  - [ ] create tasks from issues or PRs
-  - [ ] show popup/sidebar with info
-  - [ ] show metadata for issue/PR (author, open/closed state, etc.)
-- Misc.
-  - [ ] Search (with regexp?)
-  - [ ] Desktop app
-  - [ ] *Your feature request here*
+## Features
+- [x] Basic task-list functionality
+- [ ] GitHub Integration
+
+See [*plans* page](https://github.com/b3u/gitask/wiki/plans) in wiki for more.
 
 ## Contributing
 Coming soon.
