@@ -27,7 +27,7 @@ const serve = cb => {
         port: 8080
     })
     
-    gulp.watch('./css/**/*.scss', css);
+    gulp.watch('./css/**/*.scss', css).on('change', browserSync.reload);
     gulp.watch('index.html').on('change', browserSync.reload);
     gulp.watch('./js/**/*.js').on('change', browserSync.reload);
     cb();

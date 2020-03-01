@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/chota">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.10.2/Sortable.min.js"></script>
     <script defer src="./js/main.js"></script>
 </head>
 <body>
@@ -33,7 +34,8 @@
         <hr>
     </header>
     <main class="container">
-        <ul id="tasklist"></ul>
+        <ul id="tasklist">
+        </ul>
         <button class="pull-right" id="addTask">
             <i class="bx bx-plus"></i>
         </button>
@@ -48,7 +50,7 @@
         </div>
     </main>
     <template id="taskitem">
-        <li>
+        <li draggable="true">
             <input type="checkbox" />
             <label>Walk the dog...</label>
             <div class="pull-right">

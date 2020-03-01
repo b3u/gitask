@@ -27,15 +27,17 @@ const handleAdd = () => {
     const ul = document.getElementById("tasklist");
     
     let li = document.getElementById("taskitem").content.cloneNode(true);
-    li.firstElementChild.dataset.id = id;
+    
+    let liElem = li.firstElementChild;
+    liElem.dataset.id = id;
     
     let input = li.querySelector("input");
     input.name = id;
     input.id = id;
     
     let label = li.querySelector("label");
-    label.addEventListener("blur", () => {label.contentEditable = false})
     label.addEventListener("dblclick", () => handleEdit(id))
+    label.addEventListener("blur", () => {label.contentEditable = false})
     label.addEventListener("keydown", evt => {
         if(evt.code == 'Enter') {
             evt.preventDefault();
@@ -64,3 +66,8 @@ const handleEdit = id => {
 }
 
 document.getElementById('addTask').addEventListener("click", handleAdd)
+
+var sortable = Sortable.create(document.getElementById("tasklist"), {
+    chosenClass: "card",
+    animation: 150
+});

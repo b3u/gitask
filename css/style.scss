@@ -32,3 +32,13 @@ main {
 .c-is-dialog-hidden {
     display: none;
 }
+
+[draggable] {
+    user-select: none;
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+#tasklist {
+    padding: 48px inherit;
+}
