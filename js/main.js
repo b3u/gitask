@@ -74,8 +74,8 @@ const handleEdit = id => {
 document.getElementById('addTask').addEventListener("click", handleAdd)
 
 var sortable = Sortable.create(document.getElementById("tasklist"), {
-    ghostClass: "bd-dark",
-    dragClass: "card",
+    ghostClass: "task--ghost",
+    dragClass: "task--drag",
     animation: 150
 });
 

@@ -5,54 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gitask - 🖖️ A spocktacular system for organizing GitHub issues</title>
     <link rel="shortcut icon" href="https://binyam.in/assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="https://unpkg.com/chota">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.10.2/Sortable.min.js"></script>
     <script defer src="./js/main.js"></script>
 </head>
 <body>
-    <header class="c-page-header">
-        <nav class="nav is-vertical-align">
-            <div class="nav-left">
-                <p class="brand is-marginless">Gitask</p>
-            </div>
-            <div class="nav-center">
-                <input type="search" name="search" id="search" placeholder="Search here...">
-            </div>
-            <div class="nav-right">
-                <a href="https://github.com/b3u/gitask">
-                    <i class="bx bxl-github"></i>&nbsp;GitHub
-                </a>
-
-                <a href="#" data-trigger="aboutDialog">
-                    <i class="bx bx-info-circle"></i>&nbsp;About
-                </a>
-            </div>
+    <header class="page-header">
+        <span class="brand">Gitask</span>
+        <nav class="nav">
+            <a href="https://github.com/b3u/gitask">
+                <i class="bx bxl-github"></i>&nbsp;GitHub
+            </a>
         </nav>
-        <hr>
     </header>
-    <main class="container">
-        <ul id="tasklist"></ul>
-        <button class="pull-right button icon-only is-rounded primary" id="addTask">
-            <i class="bx bx-plus"></i>
-        </button>
-        <div class="c-about-dialog c-is-dialog-hidden" id="aboutDialog" data-trigger="aboutDialog">
-            <div class="card">
-                <header>
-                    <h2>About Gitask</h2>
-                </header>
-                <p>This is a side-project I made. You can find <a href="https://github.com/b3u/gitask">the code</a> on GitHub.</p>
-                <button class="button pull-right" data-trigger="aboutDialog">Return</button>
-            </div>
-        </div>
+    <main>
+        <section class="tasklist-wrapper">
+            <ul id="tasklist">
+            </ul>
+            <button class="btn-add-task" id="addTask">
+                <i class="bx bx-plus"></i> new task
+            </button>
+        </section>
     </main>
     <template id="taskitem">
-        <li draggable="true">
-            <input type="checkbox" />
-            <label>Walk the dog...</label>
-            <div class="pull-right">
+        <li draggable="true" class="task">
+            <input type="checkbox" class="task__checkbox" />
+            <label class="task__label">Walk the dog...</label>
+            <div class="task__btn-wrapper">
                 <a href="#" class="c-js-btn--edit">
                     <i class="bx bx-edit"></i>
                 </a>
@@ -62,9 +44,8 @@
             </div>
         </li>
     </template>
-    <footer class="text-center">
-        <hr>
-        <p class="is-marginless">Copyright 2020 <a href="https://binyam.in">Binyamin Green</a>. Made with <i class="bx bx-coffee-togo"></i> + <i class="bx bx-code-alt"></i>.</p>
+    <footer class="page-footer">
+        Copyright 2020 <a href="https://binyam.in">Binyamin Green</a>. Made with <i class="bx bx-coffee-togo"></i> + <i class="bx bx-code-alt"></i>.
     </footer>
 </body>
 </html>
