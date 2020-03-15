@@ -2,14 +2,14 @@
 > (WIP) A **spock**tacular system for organizing github issues :vulcan_salute: :octocat:
 
 [![Website](https://img.shields.io/website?down_message=down&label=gh-pages&logo=github&up_message=online&up_color=blue&url=https%3A%2F%2Fb3u.github.io%2Fgitask&style=flat-square)](https://b3u.github.io/gitask)
-[![Help me with Initial release](https://img.shields.io/badge/Help_me_with-Initial_Release-success?style=flat-square)](https://github.com/b3u/gitask/issues?q=is%3Aissue+milestone%3A%22Initial+Release%22)
+[![Help me with v1.1](https://img.shields.io/badge/Help_me_with-v1.1-9cf?style=flat-square)](https://github.com/b3u/gitask/issues?q=is%3Aissue+milestone%3A%22v1.1.0%22)
 [![Maintenance](https://img.shields.io/maintenance/yes/2020?style=flat-square)](#maintenance)
 
 Note that this project is still under development.
 
 ## Features
-- [x] Basic task-list functionality
-- [ ] GitHub Integration
+- Basic task-list functionality
+- GitHub Integration
 
 See [*plans* page](https://github.com/b3u/gitask/wiki/plans) in wiki for more.
 
